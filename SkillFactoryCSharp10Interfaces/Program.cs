@@ -32,6 +32,14 @@ namespace SkillFactoryCSharp10Interfaces
         }
     }
 
+    public class Worker : IWorker
+    {
+        public void Build()
+        {
+
+        }
+    }
+
     class Program
     {
         static void Main(string[] args)

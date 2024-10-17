@@ -1,9 +1,9 @@
 ﻿using System;
 namespace SkillFactoryCSharp10Interfaces
 {
-    public interface IWriter
+    public interface IWorker
     {
-        void Write();
+        public void Build();
     }
 }
 
