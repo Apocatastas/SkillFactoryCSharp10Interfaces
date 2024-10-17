@@ -23,4 +23,24 @@ namespace SkillFactoryCSharp10Interfaces
 
         }
     }
+
+    public class Writer : IWriter
+    {
+        void IWriter.Write()
+        {
+
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Writer writer = new Writer();
+
+            ((IWriter)writer).Write();
+
+            Console.ReadKey();
+        }
+    }
 }
