@@ -34,7 +34,7 @@ namespace SkillFactoryCSharp10Interfaces
 
     public class Worker : IWorker
     {
-        public void Build()
+        void IWorker.Build()
         {
 
         }
@@ -44,9 +44,12 @@ namespace SkillFactoryCSharp10Interfaces
     {
         static void Main(string[] args)
         {
-            Writer writer = new Writer();
+            // Writer writer = new Writer();
 
-            ((IWriter)writer).Write();
+            // ((IWriter)writer).Write();
+
+            Worker worker = new Worker();
+            ((IWorker)worker).Build();
 
             Console.ReadKey();
         }
