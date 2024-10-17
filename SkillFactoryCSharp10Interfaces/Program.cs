@@ -1,34 +1,30 @@
 ﻿using System;
 namespace SkillFactoryCSharp10Interfaces
 {
-    public interface ICreatable
+    public interface IBook
     {
-        void Create();
+        void Read();
     }
 
-    public interface IDeletable
+    public interface IDevice
     {
-        void Delete();
+        void TurnOn();
+        void TurnOff();
     }
 
-    public interface IUpdatable
+    public class ElectronicBook : IBook, IDevice
     {
-        void Update();
-    }
-
-    public class Entity : ICreatable, IDeletable, IUpdatable
-    {
-        public void Create()
+        void IBook.Read()
         {
 
         }
 
-        public void Delete()
+        void IDevice.TurnOn()
         {
 
         }
 
-        public void Update()
+        void IDevice.TurnOff()
         {
 
         }
