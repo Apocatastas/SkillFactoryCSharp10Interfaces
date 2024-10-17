@@ -1,56 +1,36 @@
 ﻿using System;
 namespace SkillFactoryCSharp10Interfaces
 {
-    public class Manager : IManager
+    public interface IWriter
     {
-        public void Create()
-        {
-
-        }
-
-        public void Read()
-        {
-
-        }
-
-        public void Update()
-        {
-
-        }
-
-        public void Delete()
-        {
-
-        }
+        void Write();
     }
 
-    public class Writer : IWriter
+    public interface IReader
     {
-        void IWriter.Write()
-        {
-
-        }
+        void Read();
     }
 
-    public class Worker : IWorker
+    public interface IMailer
     {
-        void IWorker.Build()
-        {
+        void SendEmail();
+    }
 
-        }
+    public class FileManager : IWriter, IReader, IMailer
+    {
+        public void Write() { }
+
+        public void Read() { }
+
+        public void SendEmail() { }
+
     }
 
     class Program
     {
         static void Main(string[] args)
         {
-            // Writer writer = new Writer();
-
-            // ((IWriter)writer).Write();
-
-            Worker worker = new Worker();
-            ((IWorker)worker).Build();
-
+           
             Console.ReadKey();
         }
     }
