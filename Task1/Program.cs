@@ -1,16 +1,12 @@
-﻿
-using System;
+﻿using System;
 using System.Text.RegularExpressions;
 
 namespace Task1
 {
-
     /// ✓ Создайте консольный мини-калькулятор, который будет подсчитывать сумму двух чисел.
     /// ✓ Определите интерфейс для функции сложения числа и реализуйте его.
     /// ✓ Дополнительно: добавьте конструкцию Try / Catch / Finally для проверки
     ///     корректности введённого значения.
-    ///
-
     class Program
     {
         public static int GetArgument()
